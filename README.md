@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a full stack application project for generating crop quality report.
 
-## Getting Started
+## Setting up the application
 
-First, run the development server:
+First, clone the repository :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone git@github.com:toshits/crop-quality.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Setting up the frontend (Next.js)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open the directory and install the dependencies:
+```shell
+cd crop-quality
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Now create the ``.env`` file with the help of ``.env.example`` file
 
-## Learn More
+Start the frontend server by:
+```shell
+# Development Server
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Production Server
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Setting up the backend application
 
-## Deploy on Vercel
+Open the backend directory:
+```shell
+cd backend
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install the dependencies:
+```shell
+npm install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**NOTE** Create the ``.env`` file for the backend using ``.env.example:``
+
+Setup Prisma by running:
+```shell
+npx prisma migrate deploy
+npx prisma generate
+```
+
+Start the backend server by:
+```shell
+# Development
+npm run dev
+
+# Production
+npm run build
+npm run start
+```
+
+**NOTE:** Make sure your MySQL Server is up and running
