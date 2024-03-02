@@ -22,23 +22,28 @@ const CropFormSection = () => {
             toast.info('Add crops from admin panel')
             return
         }
-        setLoading(true)
-        const data = new FormData()
-        data.append('cropImage', capturedImage)
-        data.append('cropId', selectedCrop)
-        barRef.current.style.width = '30%'
-        const reportRes = await fetch('http://127.0.0.1:6600/crops/generate-report', {
-            method: 'POST',
-            body: data
-        })
-        barRef.current.style.width = '60%'
-        const reportJson = await reportRes.json()
-        if (reportJson.error != null) {
-            toast.error(reportJson.error.message)
-        }
-        else {
-            router.push(`/reports/${reportJson.result.id}`)
-            barRef.current.style.width = '100%'
+        try {
+            setLoading(true)
+            const data = new FormData()
+            data.append('cropImage', capturedImage)
+            data.append('cropId', selectedCrop)
+            barRef.current.style.width = '30%'
+            const reportRes = await fetch('http://127.0.0.1:6600/crops/generate-report', {
+                method: 'POST',
+                body: data
+            })
+            barRef.current.style.width = '60%'
+            const reportJson = await reportRes.json()
+            if (reportJson.error != null) {
+                toast.error(reportJson.error.message)
+            }
+            else {
+                router.push(`/reports/${reportJson.result.id}`)
+                barRef.current.style.width = '100%'
+            }
+            
+        } catch (error) {
+            toast.error(error.message)
         }
     }
 

@@ -11,17 +11,21 @@ const CropAdminSection = () => {
 
     useEffect(()=>{
         const fetchCrops = async ()=>{
-            const cropsRes = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/crops/find-all`, {
-                next: {
-                    revalidate: 0
+            try {
+                const cropsRes = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/crops/find-all`, {
+                    next: {
+                        revalidate: 0
+                    }
+                })
+                const cropsJson = await cropsRes.json()
+                if(cropsJson.error != null){
+                    toast.error(cropsJson.error.message)
                 }
-            })
-            const cropsJson = await cropsRes.json()
-            if(cropsJson.error != null){
-                toast.error(cropsJson.error.message)
-            }
-            else{
-                setCrops(cropsJson.result)
+                else{
+                    setCrops(cropsJson.result)
+                }
+            } catch (error) {
+                toast.error(error.message)
             }
         }
 

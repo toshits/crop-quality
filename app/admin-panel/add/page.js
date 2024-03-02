@@ -13,26 +13,30 @@ const AddCrop = () => {
     const iconInpRef = useRef()
 
     const handleAddNewCrop = async () => {
-        const form = new FormData();
-        form.append("cropIcon", icon);
-        form.append("cropName", cropName);
-
-        const options = {
-            method: 'POST',
-            body: form
-        };
-
-        const cropRes = await fetch('http://localhost:6600/crops/create', options)
-        const cropJson = await cropRes.json()
-
-        if (cropJson.error != null) {
-            toast.error(cropJson.error.message)
-        }
-        else {
-            toast.success('New Crop has been successfully added')
-            setCropName('')
-            setIcon('')
-            iconInpRef.current.value = ''
+        try {
+            const form = new FormData();
+            form.append("cropIcon", icon);
+            form.append("cropName", cropName);
+    
+            const options = {
+                method: 'POST',
+                body: form
+            };
+    
+            const cropRes = await fetch('http://localhost:6600/crops/create', options)
+            const cropJson = await cropRes.json()
+    
+            if (cropJson.error != null) {
+                toast.error(cropJson.error.message)
+            }
+            else {
+                toast.success('New Crop has been successfully added')
+                setCropName('')
+                setIcon('')
+                iconInpRef.current.value = ''
+            }
+        } catch (error) {
+            toast.error(error.message)
         }
     }
 

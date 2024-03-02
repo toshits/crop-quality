@@ -7,25 +7,30 @@ import { toast } from 'react-toastify'
 const CropCard = ({ crop, setRefetchCrops }) => {
 
     const handleDeleteCrop = async () => {
-        const deleteConfirmation = await window.confirm(`Are you sure you want to delete ${crop.name}?`)
-        if(deleteConfirmation){
-            const options = {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    id: crop.id
-                })
-            }
+        try {
+            const deleteConfirmation = await window.confirm(`Are you sure you want to delete ${crop.name}?`)
+            if(deleteConfirmation){
+                const options = {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        id: crop.id
+                    })
+                }
+        
+                const delCropRes = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/crops/delete`, options)
+                const delCropJson = await delCropRes.json()
     
-            const delCropRes = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/crops/delete`, options)
-            const delCropJson = await delCropRes.json()
-
-            if(delCropJson.error != null){
-                toast.error(delCropJson.error.message)
+                if(delCropJson.error != null){
+                    toast.error(delCropJson.error.message)
+                }
+                else{
+                    setRefetchCrops((prev)=>prev+=1)
+                }
             }
-            else{
-                setRefetchCrops((prev)=>prev+=1)
-            }
+            
+        } catch (error) {
+            toast.error(error.message)
         }
     }
 
