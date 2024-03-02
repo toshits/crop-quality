@@ -7,7 +7,7 @@ const ReportCard = ({ report }) => {
     return (
         <Link className={styles.container} href={`/reports/${report.id}`}>
             <div className={styles.imgContainer}>
-                <Image src={`${process.env.NEXT_PUBLIC_SERVER_URL}/${report.cropImageUrl}`} width={0} height={0} sizes='100vw' className={styles.reportImg} />
+                <Image src={`${process.env.NEXT_PUBLIC_SERVER_URL}/${report.cropImageUrl}`} width={0} height={0} sizes='100vw' className={styles.reportImg} alt='Crop Image' />
             </div>
             <div className={styles.details}>
                 <p>Report Id: {report.id}</p>

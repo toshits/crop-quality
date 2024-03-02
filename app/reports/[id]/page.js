@@ -35,7 +35,7 @@ const ReportId = async ({ params }) => {
                         </div>
                         <div className={styles.cropImgContainer}>
                             <h3 className={styles.resTitle}>Crop Image</h3>
-                            <Image src={`${process.env.NEXT_PUBLIC_SERVER_URL}${reportJson.result.cropImageUrl}`} width={0} height={0} sizes='100vw' className={styles.cropImage} />
+                            <Image src={`${process.env.NEXT_PUBLIC_SERVER_URL}${reportJson.result.cropImageUrl}`} width={0} height={0} sizes='100vw' className={styles.cropImage} alt='Crop Image' />
                         </div>
                         <div className={styles.reportPdfContainer}>
                             <h3 className={styles.resTitle}>Crop Report</h3>

@@ -84,7 +84,7 @@ const CropFormSection = () => {
                                 <React.Fragment key={crop.id}>
                                     <input className={styles.radioInp} type="radio" id={`${crop.name}${crop.id}_home`} name="cropList" value={crop.id} onChange={(e) => setSelectedCrop(e.target.value)} />
                                     <label className={styles.label} htmlFor={`${crop.name}${crop.id}_home`}>
-                                        <Image src={`${process.env.NEXT_PUBLIC_SERVER_URL}${crop.iconUrl}`} width={70} height={70} style={{ borderRadius: '50%' }} />
+                                        <Image src={`${process.env.NEXT_PUBLIC_SERVER_URL}${crop.iconUrl}`} width={70} height={70} style={{ borderRadius: '50%' }} alt='Crop Image' />
                                         {crop.name}
                                     </label>
                                 </React.Fragment>

@@ -36,7 +36,7 @@ const CropCard = ({ crop, setRefetchCrops }) => {
 
     return (
         <div className={styles.card}>
-            <Image className={styles.cropImage} src={`${process.env.NEXT_PUBLIC_SERVER_URL}${crop.iconUrl}`} width={80} height={80} />
+            <Image className={styles.cropImage} src={`${process.env.NEXT_PUBLIC_SERVER_URL}${crop.iconUrl}`} width={80} height={80} alt='Crop Image' />
             <p className={styles.title}>{crop.name}</p>
             <button className={styles.deleteBtn} onClick={handleDeleteCrop}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width={25} className="w-6 h-6" color='#E61F23'>
