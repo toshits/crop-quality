@@ -1,0 +1,41 @@
+.note{
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    font-size: 15px;
+    height: 45px;
+    padding: 0 11px;
+    text-align: center;
+    /* width: 100%; */
+    min-width: 200px;
+    font-weight: 600;
+    color: #0F1111;
+  }
+  .btn:hover{
+      background: #F7CA00;
+      border-color: #F2C200;
+      box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  }
+
+  .link{
+    text-decoration: none;
+  }

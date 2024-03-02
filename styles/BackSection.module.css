@@ -1,0 +1,36 @@
+.backBtnContainer {
+    margin: 14px 8px;
+    display: flex;
+
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}

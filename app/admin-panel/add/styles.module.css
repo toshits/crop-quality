@@ -1,0 +1,88 @@
+
+.formSection {
+    margin: 30px 10px;
+    background-color: rgb(238, 238, 238);
+    padding: 30px 0;
+    border-radius: 12px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.inpLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    row-gap: 5px;
+}
+
+.inp {
+    box-shadow: inset #abacaf 0 0 0 2px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    border-radius: 4px;
+    padding: 9px 12px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .2s ease;
+    box-sizing: border-box;
+}
+
+.inp:hover {
+    box-shadow: 0 0 0 0 #fff inset, #FCD200 0 0 0 2px;
+}
+
+.inp:focus {
+    background: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0 #fff inset, #FCD200 0 0 0 3px;
+}
+
+.fileInp {
+    padding: 9px 12px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    font-size: 15px;
+    height: 45px;
+    padding: 0 11px;
+    text-align: center;
+    /* width: 100%; */
+    min-width: 200px;
+    font-weight: 600;
+    color: #0F1111;
+}
+
+.btn:hover {
+    background: #F7CA00;
+    border-color: #F2C200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+}
+

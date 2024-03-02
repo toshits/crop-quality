@@ -1,0 +1,25 @@
+.topNav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homeLink{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+.pastReports{
+    padding: 20px;
+    display: grid;
+    row-gap: 10px;
+}

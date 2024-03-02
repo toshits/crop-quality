@@ -1,0 +1,96 @@
+.container{
+    padding-bottom: 40px;
+}
+.topNav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.homeLink{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.metadata{
+    padding: 20px 10px;
+    margin: 10px 0;
+}
+
+.metadata p {
+    margin-top: 4px;
+    text-align: center;
+}
+
+.cropImgContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.cropImage{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.resTitle{
+    font-weight: 500;
+}
+
+.reportPdfContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    row-gap: 16px;
+}
+
+.pdfFrame{
+    width: 100%;
+    max-width: 600px;
+    height: 900px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    font-size: 15px;
+    height: 45px;
+    padding: 0 11px;
+    text-align: center;
+    /* width: 100%; */
+    min-width: 200px;
+    font-weight: 600;
+    color: #0F1111;
+    margin: 30px auto;
+}
+
+.btn:hover {
+    background: #F7CA00;
+    border-color: #F2C200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+}
+
+.error{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}

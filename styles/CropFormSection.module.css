@@ -1,0 +1,118 @@
+.formContainer {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cropSelectInp {
+    width: 100%;
+}
+
+.cropSelectLabel {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.cropSelect {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+    gap: 20px;
+    justify-content: center;
+    /* width: 180px; */
+}
+
+.cropSelect input {
+    display: none;
+}
+
+.cropSelect label {
+    background-color: #e3e3e3;
+    padding: 14px 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    border-radius: 6px;
+    border: 2px solid #e3e3e3;
+}
+
+.radioInp:checked+.label {
+    border: 2px solid #FFD814;
+    background-color: #efebda;
+}
+
+.captureImageInp {
+    display: flex;
+    justify-content: center;
+}
+
+.captureImageInp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.label {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.reportBtnContainer {
+    margin: 20px 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    font-size: 15px;
+    height: 45px;
+    padding: 0 11px;
+    text-align: center;
+    /* width: 100%; */
+    min-width: 200px;
+    font-weight: 600;
+    color: #0F1111;
+}
+
+.btn:hover {
+    background: #F7CA00;
+    border-color: #F2C200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+}
+
+.progressContainer {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.progressBar {
+    width: 100%;
+    height: 30px;
+    background-color: #e3e3e3;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    width: 0%;
+    height: 100%;
+    background-color: #F7CA00;
+    transition: width 400ms ease;
+}

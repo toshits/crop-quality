@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    border: 2px solid #c1c1c1;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.container:hover{
+    border: 2px solid #FCD200;
+}
+
+.reportImg{
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
+    margin: 0 20px;
+}
+
+.iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.container:hover > .iconContainer .rightIcon{
+    color: #FCD200;
+}
